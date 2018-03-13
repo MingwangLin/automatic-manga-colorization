@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ef18e5-12e8-4dde-a375-c822fb574e0b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/demos/data/manga_colorization/sr_clw10_bs16.bin" afterPath="$PROJECT_DIR$/demos/data/manga_colorization/sr_clw10_bs16_1413.bin" />
       <change beforePath="$PROJECT_DIR$/demos/dist/bundle.min.js" afterPath="$PROJECT_DIR$/demos/dist/bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" afterPath="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="MangaColorization.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
+            <state relative-caret-position="396">
+              <caret line="113" column="33" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -663,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
+        <state relative-caret-position="396">
+          <caret line="113" column="33" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
           <folding />
         </state>
       </provider>

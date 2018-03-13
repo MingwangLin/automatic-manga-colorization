@@ -12,7 +12,7 @@ notebooks/**/.ipynb_checkpoints/
 lib/
 
 # demos data
-demos/data/
+
 
 # python
 __pycache__/
