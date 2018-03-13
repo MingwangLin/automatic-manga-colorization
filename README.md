@@ -15,4 +15,4 @@ trained model is converted to Keras.js model by [keras.js Model Conversion] (htt
 
 # Demo
 
-built demo based on [keras.js demos] (https://transcranial.github.io/keras-js) 
+[demo url] (http://47.98.46.70). it's built based on [keras.js demos] (https://transcranial.github.io/keras-js) 
