@@ -1,5 +1,5 @@
 
-# Automatic Manga Colorization
+# Manga Colorization In Browser
 
 Ongoing web applications for automatic manga colorization in browser.
 
