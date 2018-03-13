@@ -1,7 +1,7 @@
 
 # Automatic Manga Colorization
 
-Ongoing web applications for automatic manga colorization.
+Ongoing web applications for automatic manga colorization in browser.
 
 Use [Keras.js](https://github.com/transcranial/keras-js) to run Models in everyone's browser.
 
