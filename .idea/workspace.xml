@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ef18e5-12e8-4dde-a375-c822fb574e0b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/demos/assets/image-super-resolution.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/demos/assets/mnist-acgan.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/demos/data/manga_colorization/sr_clw10_bs16.bin" afterPath="$PROJECT_DIR$/demos/data/manga_colorization/sr_clw10_bs16_1413.bin" />
       <change beforePath="$PROJECT_DIR$/demos/dist/bundle.min.js" afterPath="$PROJECT_DIR$/demos/dist/bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/demos/src/components/Home.vue" afterPath="$PROJECT_DIR$/demos/src/components/Home.vue" />
-      <change beforePath="$PROJECT_DIR$/demos/src/components/InfoPanel.vue" afterPath="$PROJECT_DIR$/demos/src/components/InfoPanel.vue" />
-      <change beforePath="$PROJECT_DIR$/demos/src/components/MainMenu.vue" afterPath="$PROJECT_DIR$/demos/src/components/MainMenu.vue" />
       <change beforePath="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" afterPath="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" />
-      <change beforePath="$PROJECT_DIR$/demos/src/components/models/MnistAcgan.vue" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/demos/src/data/demo-titles.js" afterPath="$PROJECT_DIR$/demos/src/data/demo-titles.js" />
-      <change beforePath="$PROJECT_DIR$/demos/src/data/sample-image-urls.js" afterPath="$PROJECT_DIR$/demos/src/data/sample-image-urls.js" />
-      <change beforePath="$PROJECT_DIR$/demos/src/router/index.js" afterPath="$PROJECT_DIR$/demos/src/router/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,62 +19,38 @@
       <file leaf-file-name="MainMenu.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/src/components/MainMenu.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
+            <state relative-caret-position="90">
               <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demos/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MangaColorization.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MangaColorization.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="91" column="54" lean-forward="false" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
+            <state relative-caret-position="90">
+              <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MangaDecolorization.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaDecolorization.vue">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="143" column="27" lean-forward="false" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
-              <folding>
-                <element signature="e#3487#3509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colormaps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demos/src/data/colormaps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+            <state relative-caret-position="90">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Imagenet.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demos/src/components/common/Imagenet.vue">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demos/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="441" column="18" lean-forward="false" selection-start-line="441" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -94,6 +62,28 @@
             <state relative-caret-position="414">
               <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bundle.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demos/dist/bundle.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,18 +101,18 @@
       <file leaf-file-name="InfoPanel.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/src/components/InfoPanel.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
+            <state relative-caret-position="36">
               <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="144">
+              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -186,12 +176,12 @@
         <option value="$PROJECT_DIR$/demos/src/components/models/ImageSuperResolution.vue" />
         <option value="$PROJECT_DIR$/demos/src/router/index.js" />
         <option value="$PROJECT_DIR$/demos/src/components/MainMenu.vue" />
-        <option value="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" />
         <option value="$PROJECT_DIR$/demos/src/components/InfoPanel.vue" />
         <option value="$PROJECT_DIR$/demos/src/components/models/MangaDecolorization.vue" />
         <option value="$PROJECT_DIR$/demos/src/data/sample-image-urls.js" />
         <option value="$PROJECT_DIR$/demos/src/data/demo-titles.js" />
         <option value="$PROJECT_DIR$/demos/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" />
       </list>
     </option>
   </component>
@@ -321,7 +311,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -332,6 +321,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="0" y="0" width="293" height="704" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -450,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/dist/bundle.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408891">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/model_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -471,24 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/union/examples/socketio/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -510,13 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -596,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,15 +566,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/src/components/common/Imagenet.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
+        <state relative-caret-position="7794">
           <caret line="441" column="18" lean-forward="false" selection-start-line="441" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
           <folding />
         </state>
@@ -621,10 +579,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaDecolorization.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="2448">
           <caret line="143" column="27" lean-forward="false" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
           <folding>
-            <element signature="e#3487#3509#0" expanded="true" />
+            <element signature="e#3487#3509#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -637,17 +595,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="91" column="54" lean-forward="false" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demos/src/components/InfoPanel.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
+        <state relative-caret-position="36">
           <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
@@ -655,7 +605,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/src/components/MainMenu.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
+        <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
@@ -671,8 +621,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="144">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/dist/bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
           <folding />
         </state>
       </provider>

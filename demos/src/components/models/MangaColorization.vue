@@ -89,7 +89,7 @@ import ModelStatus from '../common/ModelStatus'
 
 
 const MODEL_SELECT_LIST = [
-  { text: 'Cycle-GAN-V2(7.9MB)', value: 'sr_clw10_bs16' },
+  { text: 'Cycle-GAN-V2(7.9MB)', value: 'sr_clw10_bs16_1413' },
   { text: 'Cycle-GAN-Basic(7.9MB)', value: 'sr' },
 
 ]
