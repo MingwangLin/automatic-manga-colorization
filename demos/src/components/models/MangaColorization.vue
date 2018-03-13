@@ -55,7 +55,7 @@
         <image-comparison :height="outputImageShape[0]" :width="outputImageShape[1]">
           <canvas style="background:white;" slot="after" id="output-canvas" />
           <canvas style="background:white;" slot="before" id="scaled-input-canvas" />
-          <div v-if="modelRunning" slot="message" class="loading-indicator display-1 orange--text">Running...</div>
+          <div v-if="modelRunning" slot="message" class="loading-indicator display-1 orange--text">Running...(need 1~15 seconds) </div>
           <div v-else-if="modelRunningError" slot="message" class="error-message display-1 error--text">Error running neural network model</div>
           <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="beforeLabel">Raw manga</span>
           <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="afterLabel">Colorized Manga</span>
