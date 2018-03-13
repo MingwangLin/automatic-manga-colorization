@@ -1,0 +1,22 @@
+.DS_Store
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn.lock
+yarn-error.log
+
+# jupyter
+notebooks/**/.ipynb_checkpoints/
+
+# babel compiled dir
+lib/
+
+# demos data
+demos/data/
+
+# python
+__pycache__/
+*.pyc
+
+# assets
+assets/logo.idraw
