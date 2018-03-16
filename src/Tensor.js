@@ -262,6 +262,9 @@ export default class Tensor {
    * @param {number[]} data
    */
   replaceTensorData(data) {
+    // console.log('tensor.js replace start')
+    // console.log('tensor.js computed_data', data[0])
+    // console.log('tensor.js raw_data', this.tensor.data[0])
     if (data && data.length && data instanceof this.arrayType) {
       this.tensor.data.set(data)
     } else if (data && data.length && data instanceof Array) {
@@ -269,6 +272,7 @@ export default class Tensor {
     } else {
       throw new Error('[Tensor] invalid input for replaceTensorData method.')
     }
+    // console.log('tensor.js  this_data_replaced', this.tensor.data[0])
 
     if (this.glTexture) {
       const gl = webgl2.context
@@ -277,6 +281,8 @@ export default class Tensor {
       gl.bindTexture(textureTarget, this.glTexture)
 
       const shape = this.glTextureShape
+        // console.log('tensor.js this.glTextureShape', shape)
+
       if (this.glTextureType === '2d') {
         const data = this.tensor.data
         gl.texSubImage2D(textureTarget, 0, 0, 0, shape[1], shape[0], textureFormat, textureType, data, 0)
@@ -285,12 +291,17 @@ export default class Tensor {
         gl.texSubImage3D(textureTarget, 0, 0, 0, 0, shape[1], shape[0], shape[2], textureFormat, textureType, data, 0)
       }
     }
+    // console.log('tensor.js this_data_replace_after', this.tensor.data[0])
+    // console.log('tensor.js replace end')
+
   }
 
   /**
    * Transfer data from webgl texture on GPU to ndarray on CPU
    */
   transferFromGLTexture() {
+    // // console.log('transfer start')
+    // // console.log('glTextureFragments', this.glTextureFragments == true)
     if (this.glTextureFragments) {
       this.tensor = ndarray(new this.arrayType(this.glTextureShape[0] * this.glTextureShape[1]), this.glTextureShape)
       let offset = 0
@@ -316,6 +327,10 @@ export default class Tensor {
       // collapse to 1D
       this.tensor = squeeze(this.tensor, [0])
     }
+
+    // // console.log('data_transfered', this.tensor.data[0])
+    // // console.log('transfer end')
+
   }
 
   /**
@@ -367,19 +382,26 @@ export default class Tensor {
     // second axis is the channel, or common, axis
     const channelDataSize = this.tensor.shape[0]
     const channels = this.tensor.shape[1]
-
+    // // console.log('this.originalShape.reduce((a, b) => a * b, 1))', this.originalShape.reduce((a, b) => a * b, 1))
     const reshaped = ndarray(new this.arrayType(this.originalShape.reduce((a, b) => a * b, 1)), this.originalShape)
     const channelDataRaveled = ndarray(new this.arrayType(channelDataSize), [channelDataSize])
+      // // console.log('tensor_js channelDataRaveled', channelDataRaveled)
     const unraveledChannelShape = [...this.originalShape.slice(0, axis), ...this.originalShape.slice(axis + 1)]
+      // // console.log('tensor_js unraveledChannelShape', unraveledChannelShape)
     const unraveledChannel = ndarray(
       new this.arrayType(unraveledChannelShape.reduce((a, b) => a * b, 1)),
       unraveledChannelShape
     )
     const axisSlices = Array(this.originalShape.length).fill(null)
+      // // console.log('tensor_js axisSlices', axisSlices)
+      // // console.log('tensor_js axis', axis)
     for (let n = 0; n < channels; n++) {
+        // // console.log('tensor_js this.tensor.pick(null, n)', this.tensor.pick(null, n))
+
       ops.assign(channelDataRaveled, this.tensor.pick(null, n))
       unraveledChannel.data = channelDataRaveled.data
       axisSlices[axis] = n
+        // // console.log('tensor_js reshaped.pick(...axisSlices)', reshaped.pick(...axisSlices))
       ops.assign(reshaped.pick(...axisSlices), unraveledChannel)
     }
 
