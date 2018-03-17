@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ef18e5-12e8-4dde-a375-c822fb574e0b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dist/keras.min.js" afterPath="$PROJECT_DIR$/dist/keras.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/layers/normalization/BatchNormalization.js" afterPath="$PROJECT_DIR$/src/layers/normalization/BatchNormalization.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,18 +24,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tensor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demos/src/utils/tensor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="70" column="3" lean-forward="false" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,14 +34,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BatchNormalization.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BatchNormalization.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/layers/normalization/BatchNormalization.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="148">
-              <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+              <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="90">
+                <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="56" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,16 +77,6 @@
               <folding>
                 <element signature="e#3496#3518#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArchitectureDiagram.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demos/src/components/common/ArchitectureDiagram.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/node_modules/ndarray/ndarray.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
-              <caret line="319" column="25" lean-forward="true" selection-start-line="319" selection-start-column="25" selection-end-line="319" selection-end-column="25" />
+              <caret line="319" column="25" lean-forward="false" selection-start-line="319" selection-start-column="25" selection-end-line="319" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -152,7 +152,6 @@
       <find>transferFromGLTexture</find>
       <find>transpo</find>
       <find>x\.transferFromGLTexture\(\)\n</find>
-      <find>console</find>
       <find>transfer</find>
       <find>reshapeTo2D</find>
       <find>// console.log</find>
@@ -164,6 +163,7 @@
       <find>console.log</find>
       <find>ops.sum</find>
       <find>ops.re</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace>variance</replace>
@@ -202,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/Tensor.js" />
         <option value="$PROJECT_DIR$/demos/src/components/models/MangaColorization.vue" />
         <option value="$PROJECT_DIR$/src/layers/normalization/BatchNormalization.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -358,20 +359,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/blueimp-load-image/js/load-image.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/blueimp-load-image/js/load-image-scale.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2349">
@@ -695,7 +682,7 @@
     <entry file="file://$PROJECT_DIR$/node_modules/ndarray/ndarray.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="319" column="25" lean-forward="true" selection-start-line="319" selection-start-column="25" selection-end-line="319" selection-end-column="25" />
+          <caret line="319" column="25" lean-forward="false" selection-start-line="319" selection-start-column="25" selection-end-line="319" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -711,10 +698,29 @@
     <entry file="file://$PROJECT_DIR$/src/layers/normalization/BatchNormalization.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
-          <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="56" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
