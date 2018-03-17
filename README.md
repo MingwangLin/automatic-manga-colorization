@@ -7,7 +7,7 @@ Use [Keras.js](https://github.com/transcranial/keras-js) to run Models in everyo
 
 # Demo
 
-[manga-colorization-demo](http://47.98.46.70). it's built based on [keras.js demos](https://transcranial.github.io/keras-js) 
+demo url: [manga-colorization-demo](http://47.98.46.70). it's built based on [keras.js demos](https://transcranial.github.io/keras-js) 
 
 # Model Training
 
