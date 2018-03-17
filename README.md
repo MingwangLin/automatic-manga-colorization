@@ -1,13 +1,10 @@
 
-# Manga Colorization In Browser
+# Manga Colorization In Browser [demo](http://47.98.46.70)
 
-Ongoing web applications for automatic manga colorization in browser.
+Ongoing web applications for automatic manga colorization with model totally run in browser. 
 
-Use [Keras.js](https://github.com/transcranial/keras-js) to run Models in everyone's browser.
+Built based on [keras.js demos](https://transcranial.github.io/keras-js), Use [Keras.js](https://github.com/transcranial/keras-js) to run Models in everyone's browser.
 
-# Demo
-
-demo url: [manga-colorization-demo](http://47.98.46.70). it's built based on [keras.js demos](https://transcranial.github.io/keras-js) 
 
 # Model Training
 
