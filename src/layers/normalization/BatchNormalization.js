@@ -163,73 +163,31 @@ export default class BatchNormalization extends Layer {
         // compute mean and variance of ndarray
         x.transferFromGLTexture()
 
+        // const d = new Date();
+        // const n = d.getTime()
+
         const channels = x.tensor.shape[1]
         const channelDataSize = x.tensor.shape[0]
         // // console.log('batchnorm.js channles', channels)
         let x_mean = []
         let x_variance = []
         let channelDataRaveled = ndarray(new x.arrayType(channelDataSize), [channelDataSize])
-        // // console.log('batchnorm.js x.tensor.pick(null, 1).data', x.tensor.pick(null, 1).data)
-        // // console.log('batchnorm.js finish pick')
 
         for (let i = 0; i < channels; i++) {
             ops.assign(channelDataRaveled, x.tensor.pick(null, i))
 
-            // // console.log('batchnorm.js channelData.length', channelData.length)
-            // // console.log('batchnorm.js channelData', channelData)
-            // // console.log('batchnorm.js _.sum(channelData)', _.sum(channelData))
-
-            let mean = _.sum(channelDataRaveled.data) / channelDataSize
+            const mean = ops.sum(channelDataRaveled) / channelDataSize
             x_mean.push(mean)
 
-            let variance = _.sum(channelDataRaveled.data.map(x => (x - mean) ** 2)) / channelDataSize
+            ops.subseq(channelDataRaveled, mean)
+            ops.powseq(channelDataRaveled, 2)
+            const variance = ops.sum(channelDataRaveled) / channelDataSize
             x_variance.push(variance)
+
         }
-        //
-        // const channel_counts = x.tensor.shape[1]
-        // const data_size_per_channel = x.tensor.shape[0]
-        //
-        // // const x_T = x.tensor.transpose(1, 0)
-        // const x_T = x.tensor
-        // const x_data = x_T.data
-        // const x_chunks = _.chunk(x_data, channel_counts)
-        //
-        // let x_per_channel = []
-        // let x_mean = []
-        // let x_variance = []
-        //
-        // for (let i = 0; i < channel_counts; i++) {
-        //     x_per_channel = x_chunks[i]
-        //
-        //     let mean = _.sum(x_per_channel) / data_size_per_channel
-        //     x_mean.push(mean)
-        //
-        //     let variance = _.sum(x_per_channel.map(x => (x - mean) ** 2)) / data_size_per_channel
-        //     x_variance.push(variance)
-        // }
-        // let mean_tmp = _.sum(x_data) / x_data.length
-        // x_mean = _.fill(Array(x_channels), mean_tmp)
-        //
-        // let stddev_tmp = Math.sqrt(_.sum(x_data.map(x => (x - mean_tmp) ** 2)) / x_data.length) + epsilon
-        // x_variance = _.fill(Array(x_channels), stddev_tmp)
 
-        // const weight_before_transfer = this.weights['moving_mean'].tensor.data[0]
-        // // // console.log('weight_before_transfer', weight_before_transfer)
-        //
-        // this.weights['moving_mean'].transferFromGLTexture()
-        //
-        //
-        // const weight_after_transfer = this.weights['moving_mean'].tensor.data[0]
-        // // // console.log('weight_after_transfer', weight_after_transfer)
-
-        // this.weights['moving_mean'].tensor.data = x_mean
-        // this.weights['moving_variance'].tensor.data = x_variance
-        // // console.log('batchnorm.js this.weight', this.weight)
         this.weights['moving_mean'].replaceTensorData(x_mean)
         this.weights['moving_variance'].replaceTensorData(x_variance)
-
-        // const weight_after_replace = this.weights['moving_mean'].tensor.data[0]
-        // // // console.log('weight_after_replace', weight_after_replace)
 
         if (!this.axisNormalized) {
             if (x.is2DReshaped || x.is2DSquareReshaped) {
