@@ -163,7 +163,7 @@ export default class Model {
     this.runningProgress = 0
     this.events.emit('initProgress', 0)
     await this._traverseDAG(this.inputLayerNames, 'initProgress')
-    this.pauseAfterLayerCalls = _pauseAfterLayerCalls
+    // this.pauseAfterLayerCalls = _pauseAfterLayerCalls
 
     // reset hasOutput and visited flags in all layers
     this.finishedLayerNames = []

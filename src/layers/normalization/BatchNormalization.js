@@ -160,34 +160,30 @@ export default class BatchNormalization extends Layer {
     _callGPU(x) {
         // console.log('call_gpu_start')
 
-        // compute mean and variance of ndarray
+        // Transfer data from webgl texture on GPU to ndarray on CPU
         x.transferFromGLTexture()
 
-        // const d = new Date();
-        // const n = d.getTime()
-
+        // Compute mean and variance of input ndarray
         const channels = x.tensor.shape[1]
         const channelDataSize = x.tensor.shape[0]
-        // // console.log('batchnorm.js channles', channels)
-        let x_mean = []
-        let x_variance = []
         let channelDataRaveled = ndarray(new x.arrayType(channelDataSize), [channelDataSize])
-
+        let xMean = []
+        let xVariance = []
         for (let i = 0; i < channels; i++) {
             ops.assign(channelDataRaveled, x.tensor.pick(null, i))
 
             const mean = ops.sum(channelDataRaveled) / channelDataSize
-            x_mean.push(mean)
+            xMean.push(mean)
 
             ops.subseq(channelDataRaveled, mean)
             ops.powseq(channelDataRaveled, 2)
             const variance = ops.sum(channelDataRaveled) / channelDataSize
-            x_variance.push(variance)
-
+            xVariance.push(variance)
         }
 
-        this.weights['moving_mean'].replaceTensorData(x_mean)
-        this.weights['moving_variance'].replaceTensorData(x_variance)
+        // replace old moving mean and variance with computed mean and variance
+        this.weights['moving_mean'].replaceTensorData(xMean)
+        this.weights['moving_variance'].replaceTensorData(xVariance)
 
         if (!this.axisNormalized) {
             if (x.is2DReshaped || x.is2DSquareReshaped) {
