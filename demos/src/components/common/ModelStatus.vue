@@ -27,7 +27,7 @@
         computed: {
             message() {
                 if (this.modelLoading) {
-                    return 'Loading weights...'
+                    return 'Downloading weights...'
                 } else if (this.modelInitializing) {
                     return 'Initializing model...'
                 } else if (this.modelRunning) {

@@ -3,7 +3,6 @@ export const IMAGE_URLS = [
   { text: 'sample2', value: 'https://i.imgur.com/pGRKo5I.jpg' },
   { text: 'sample3', value: 'https://i.imgur.com/epVjntc.jpg' },
   { text: 'sample4', value: 'https://i.imgur.com/e3WPhY1.jpg' },
-  { text: 'sample5', value: 'https://i.imgur.com/BofPOE4.jpg' },
   { text: 'sample6', value: 'https://i.imgur.com/epXkDCi.jpg' },
   { text: 'sample7', value: 'https://i.imgur.com/WTnp7ET.jpg' },
   { text: 'sample8', value: 'https://i.imgur.com/zQk7X90.jpg' },

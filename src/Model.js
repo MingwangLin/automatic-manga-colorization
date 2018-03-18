@@ -135,6 +135,12 @@ export default class Model {
    * @returns {Promise}
    */
   async _initialize() {
+
+    // always turn on `pauseAfterLayerCalls` during initialization
+    // this allows for DOM updates using initProgress events
+    const _pauseAfterLayerCalls = this.pauseAfterLayerCalls
+    this.pauseAfterLayerCalls = true
+
     this.events.emit('loadingProgress', 0)
     try {
       const req = this.filesystem ? this._dataRequestFS() : this._dataRequestHTTP(this.headers)
@@ -156,10 +162,7 @@ export default class Model {
       inputLayer.visited = true
     })
 
-    // always turn on `pauseAfterLayerCalls` during initialization
-    // this allows for DOM updates using initProgress events
-    const _pauseAfterLayerCalls = this.pauseAfterLayerCalls
-    this.pauseAfterLayerCalls = true
+
     this.runningProgress = 0
     this.events.emit('initProgress', 0)
     await this._traverseDAG(this.inputLayerNames, 'initProgress')

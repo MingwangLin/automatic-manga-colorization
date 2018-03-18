@@ -29,7 +29,7 @@
             <v-layout row wrap justify-center align-center>
                 <v-flex xs7 md5>
                     <div v-if="!image">
-                        <input type="file" class="justify-center" @change="onFileChange">
+                        <input type="file" id="input-img-file" class="justify-center" @change="onFileChange">
                     </div>
                 </v-flex>
                 <v-flex xs1 class="input-label text-xs-center">or</v-flex>
@@ -102,7 +102,8 @@
 
 
     const MODEL_SELECT_LIST = [
-        {text: 'Cycle-GAN-Basic(7.9MB)', value: 'sr'},
+        {text: 'light-orange(7.9MB)', value: 'tf_GA_weights368000'},
+        {text: 'light-yellow(7.9MB)', value: 'tf_GA_weights409000'},
 
     ]
 
@@ -125,7 +126,6 @@
             this.model = new KerasJS.Model({
                 filepath: DEFAULT_FILEPATH,
                 gpu: this.hasWebGL,
-                pauseAfterLayerCalls: false
             })
 
             this.model.events.on('loadingProgress', this.handleLoadingProgress)
@@ -185,8 +185,6 @@
                 this.modelLoadingProgress = 0
                 this.modelInitializing = true
                 this.modelInitProgress = 0
-                this.modelRunning = true
-                this.modelRunningProgress = 0
                 this.modelLayersInfo = []
                 this.model = new KerasJS.Model({
                     filepath:
@@ -234,11 +232,13 @@
                 }
             },
             onFileChange(e) {
-                this.imageURLSelect = null
-                this.modelRunning = true
-                this.modelRunningProgress = 0
-                this.model.events.on('predictProgress', this.handleRunningProgress)
-                var file = e.target.files[0]
+                // this.imageURLSelect = null
+                let file = e.target.files[0]
+                if (file) {
+                    this.modelRunning = true
+                    this.modelRunningProgress = 0
+                    this.model.events.on('predictProgress', this.handleRunningProgress)
+                }
                 this.loadImageToCanvas(file)
             },
 
@@ -414,6 +414,8 @@
                     const ctx = document.getElementById(id).getContext('2d')
                     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
                 })
+                const inputImgFile = document.getElementById('input-img-file')
+                inputImgFile.value = null
             }
         }
     }
