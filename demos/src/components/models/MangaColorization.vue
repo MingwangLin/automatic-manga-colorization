@@ -24,7 +24,7 @@
                 </v-flex>
             </v-layout>
             <v-layout row justify-center class="input-label">
-                Enter a valid image URL or select an image from the dropdown:
+                Choose an image file or select an image from the dropdown:
             </v-layout>
             <v-layout row wrap justify-center align-center>
                 <v-flex xs7 md5>

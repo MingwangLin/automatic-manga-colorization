@@ -138,7 +138,6 @@ export default class Model {
 
     // always turn on `pauseAfterLayerCalls` during initialization
     // this allows for DOM updates using initProgress events
-    const _pauseAfterLayerCalls = this.pauseAfterLayerCalls
     this.pauseAfterLayerCalls = true
 
     this.events.emit('loadingProgress', 0)
@@ -166,7 +165,6 @@ export default class Model {
     this.runningProgress = 0
     this.events.emit('initProgress', 0)
     await this._traverseDAG(this.inputLayerNames, 'initProgress')
-    // this.pauseAfterLayerCalls = _pauseAfterLayerCalls
 
     // reset hasOutput and visited flags in all layers
     this.finishedLayerNames = []
