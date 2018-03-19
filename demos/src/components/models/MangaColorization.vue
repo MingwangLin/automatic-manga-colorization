@@ -102,8 +102,8 @@
 
 
     const MODEL_SELECT_LIST = [
-        {text: 'light-orange(7.9MB)', value: 'tf_GA_weights368000'},
-        {text: 'light-yellow(7.9MB)', value: 'tf_GA_weights409000'},
+        {text: 'light-blue(7.9MB)', value: 'tf_GA_weights607000'},
+        {text: 'thick-pink(7.9MB)', value: 'tf_GA_weights593000'},
 
     ]
 
