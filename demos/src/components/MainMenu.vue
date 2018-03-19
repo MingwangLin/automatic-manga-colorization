@@ -10,13 +10,20 @@
           <span class="menu-item-subheading">CycleGAN</span>
         </a>
       </li>
-
+      <li :class="{ active: currentView === 'manga-colorization-big' }">
+        <a href="#/manga-colorization-big">
+          <span class="menu-item-heading">manga-colorization with-bigger-image</span>
+          <span class="menu-item-subheading">CycleGAN</span>
+        </a>
+      </li>
       <li :class="{ active: currentView === 'manga-decolorization' }">
         <a href="#/manga-decolorization">
           <span class="menu-item-heading">manga-decolorization</span>
           <span class="menu-item-subheading">CycleGAN</span>
         </a>
       </li>
+
+
 
 
     </ul>

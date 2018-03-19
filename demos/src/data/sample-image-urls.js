@@ -1,13 +1,14 @@
 export const IMAGE_URLS = [
-  { text: 'sample1', value: 'https://i.imgur.com/fXhYX8r.png.jpg' },
-  { text: 'sample2', value: 'https://i.imgur.com/pGRKo5I.jpg' },
-  { text: 'sample3', value: 'https://i.imgur.com/epVjntc.jpg' },
-  { text: 'sample4', value: 'https://i.imgur.com/e3WPhY1.jpg' },
-  { text: 'sample6', value: 'https://i.imgur.com/epXkDCi.jpg' },
-  { text: 'sample7', value: 'https://i.imgur.com/WTnp7ET.jpg' },
-  { text: 'sample8', value: 'https://i.imgur.com/zQk7X90.jpg' },
-  { text: 'sample9', value: 'https://i.imgur.com/hnNRn9z.jpg' },
-  { text: 'sample10', value: 'https://i.imgur.com/vd8znMe.jpg' },
+  { text: 'sample1', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4928.JPG' },
+  { text: 'sample2', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4929.JPG' },
+  { text: 'sample3', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4930.JPG' },
+  { text: 'sample4', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4931.JPG' },
+  { text: 'sample5', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4937.JPG' },
+  { text: 'sample6', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4938.JPG' },
+  { text: 'sample7', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4939.JPG' },
+  { text: 'sample8', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4940.JPG' },
+  { text: 'sample9', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4950.JPG' },
+  { text: 'sample10', value: 'http://sampleimage.oss-cn-hangzhou.aliyuncs.com/IMG_4951.JPG' },
 
 ]
 
