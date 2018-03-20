@@ -7,15 +7,15 @@
             <v-card-text>
 
                 <div class="info-panel-text" v-if="currentView === 'manga-decolorization'">
-                    <p>上色工作对电脑配置的要求较高，所以配置较差的电脑运行速度会进一步降低。
+                    <p>去色工作对电脑配置的要求较高，所以配置较差的电脑运行速度会进比较慢。
                     为了保证Demo的可用性，建议大家在较新的Firefox或Chrome桌面端浏览。由于一些兼容性问题，移动端设备端目前暂不可用。</p>
-                    <p>所有的上色运算都在本地浏览器里完成，没有任何的图像上传.</p>
-                    <p>上色模型训练自<a
+                    <p>所有的去色运算都在本地浏览器里完成，没有任何的图像上传。</p>
+                    <p>去色模型训练自<a
                             target="_blank" rel="noopener noreferrer"
                             href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>。</p>
                 </div>
                 <div class="info-panel-text" v-else-if="currentView === 'manga-colorization'">
-                <p>上色工作对电脑配置的要求较高，所以配置较差的电脑运行速度会进一步降低。
+                <p>上色工作对电脑配置的要求较高，所以配置较差的电脑运行速度会比较慢。
                     为了保证Demo的可用性，建议大家在较新的Firefox或Chrome桌面端浏览。由于一些兼容性问题，移动端设备端目前暂不可用。</p>
                     <p>所有的上色运算都在本地浏览里完成，没有任何的图像上传。</p>
                     <p>上色模型训练自<a
