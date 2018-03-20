@@ -46,6 +46,13 @@
         </a>
       </li>
     </ul>
+    <p class="menu-label">Blog</p>
+    <ul class="menu-list blog">
+      <li>
+        <a href="https://zhuanlan.zhihu.com/p/34672860" target="_blank" rel="noopener noreferrer"><v-icon>fa-zhihu</v-icon> Project Introduction</a>
+      </li>
+
+    </ul>
     <p class="menu-label">Contact</p>
     <ul class="menu-list contact">
       <li>
@@ -135,7 +142,8 @@ export default {
 }
 
 .menu-list.github,
-.menu-list.contact {
+.menu-list.contact,
+.menu-list.blog {
   & li {
     padding: 5px 10px;
     font-size: 14px;

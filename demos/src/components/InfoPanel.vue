@@ -27,8 +27,8 @@
                     <p>All computation performed entirely in your browser. Images are not uploaded to any servers.</p>
                 </div>
                 <div class="info-panel-text" v-else-if="currentView === 'manga-colorization-big'">
-                    <p>Manga Colorization with bigger image size will need more computation sources, so model running may
-                        be very slow if your computer is old.</p>
+                    <p>Manga Colorization with bigger image size will need more computation sources, so model running might
+                        be very slow if your PC is not powerful.</p>
                     <p>This demonstrates several CNN models for manga-colorzation. They are adapted from GitHub repo <a
                             target="_blank" rel="noopener noreferrer"
                             href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>. See the
