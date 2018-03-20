@@ -57,7 +57,7 @@
                                   :modelRunningProgress="modelRunningProgress"
                     ></model-status>
                 </transition>
-                <div class="subheading text-xs-left mb-2">Decolorized Manga</div>
+                <div class="subheading text-xs-left mb-2">输出</div>
                 <image-comparison :height="outputImageShape[0]" :width="outputImageShape[1]">
                     <canvas style="background:white;" slot="after" id="output-canvas"/>
                     <canvas style="background:white;" slot="before" id="scaled-input-canvas"/>
@@ -72,7 +72,7 @@
                 </image-comparison>
             </div>
             <div class="input-image-panel text-xs-center pa-2 my-4">
-                <div class="subheading text-xs-left mb-2">Input Manga</div>
+                <div class="subheading text-xs-left mb-2">输入</div>
                 <div class="input-canvas-container">
                     <canvas id="input-canvas" class="white"/>
                     <div class="message">
