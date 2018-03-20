@@ -14,19 +14,19 @@
 <script>
     const DEMO_INFO = [
         {
-            title: '?????? (??)',
+            title: '黑白漫画上色 (小图)',
             path: 'manga-colorization',
             imagePath: 'demos/assets/manga-colorization.png'
         },
 
         {
-            title: '?????? (??)',
+            title: '黑白漫画上色 (大图)',
             path: 'manga-colorization-big',
             imagePath: 'demos/assets/manga-colorization-big.png'
         },
 
         {
-            title: '?????? (??)',
+            title: '彩色漫画去色 (小图)',
             path: 'manga-decolorization',
             imagePath: 'demos/assets/manga-decolorization.png'
         }

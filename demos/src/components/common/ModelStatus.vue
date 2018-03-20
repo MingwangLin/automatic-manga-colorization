@@ -27,11 +27,11 @@
         computed: {
             message() {
                 if (this.modelLoading) {
-                    return '????????...'
+                    return '正在下载模型参数...'
                 } else if (this.modelInitializing) {
-                    return '?????????...'
+                    return '正在初始化上色模型...'
                 } else if (this.modelRunning) {
-                    return '???????...'
+                    return '上色模型运行中...'
                 }
                 else {
                     return ''
