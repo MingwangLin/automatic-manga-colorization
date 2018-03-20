@@ -6,19 +6,19 @@
 
       <li :class="{ active: currentView === 'manga-colorization' }">
         <a href="#/manga-colorization">
-          <span class="menu-item-heading">????????</span>
+          <span class="menu-item-heading">漫画上色（小图）</span>
           <span class="menu-item-subheading">CycleGAN</span>
         </a>
       </li>
       <li :class="{ active: currentView === 'manga-colorization-big' }">
         <a href="#/manga-colorization-big">
-          <span class="menu-item-heading">????????</span>
+          <span class="menu-item-heading">漫画上色（大图）</span>
           <span class="menu-item-subheading">CycleGAN</span>
         </a>
       </li>
       <li :class="{ active: currentView === 'manga-decolorization' }">
         <a href="#/manga-decolorization">
-          <span class="menu-item-heading">????????</span>
+          <span class="menu-item-heading">彩漫去色（小图）</span>
           <span class="menu-item-subheading">CycleGAN</span>
         </a>
       </li>
@@ -27,7 +27,7 @@
 
 
     </ul>
-    <p class="menu-label">????</p>
+    <p class="menu-label">技术链接</p>
     <ul class="menu-list github">
       <li>
         <a href="https://github.com/junyanz/CycleGAN" target="_blank" rel="noopener noreferrer">
@@ -46,14 +46,14 @@
         </a>
       </li>
     </ul>
-    <p class="menu-label">??</p>
+    <p class="menu-label">博客</p>
     <ul class="menu-list blog">
       <li>
-        <a href="https://zhuanlan.zhihu.com/p/34672860" target="_blank" rel="noopener noreferrer"><v-icon>fa-link</v-icon>????/a>
+        <a href="https://zhuanlan.zhihu.com/p/34672860" target="_blank" rel="noopener noreferrer"><v-icon>fa-link</v-icon>项目介绍/a>
       </li>
 
     </ul>
-    <p class="menu-label">????</p>
+    <p class="menu-label">联系方式</p>
     <ul class="menu-list contact">
       <li>
         <a href="https://github.com/MingwangLin/" target="_blank" rel="noopener noreferrer"><v-icon>fa-github</v-icon> Ming-wang Lin</a>

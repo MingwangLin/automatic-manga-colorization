@@ -18,13 +18,13 @@
                             v-model="modelSelect"
                             :disabled="modelLoading || modelInitializing"
                             :items="modelSelectList"
-                            label="??????"
+                            label="上色模型列表"
                             max-height="750"
                     ></v-select>
                 </v-flex>
             </v-layout>
             <v-layout row justify-center class="input-label">
-                ?????????????????????????
+                从本地选择一张图片或从下拉列表中选择一张样本图片：
             </v-layout>
             <v-layout row wrap justify-center align-center>
                 <v-flex xs7 md5>
@@ -32,18 +32,18 @@
                         <input type="file" id="input-img-file" class="justify-center" @change="onFileChange">
                     </div>
                 </v-flex>
-                <v-flex xs1 class="input-label text-xs-center">?</v-flex>
+                <v-flex xs1 class="input-label text-xs-center">或</v-flex>
                 <v-flex xs5 md3>
                     <v-select
                             v-model="imageURLSelect"
                             :disabled="modelLoading || modelInitializing"
                             :items="imageURLSelectList"
-                            label="????"
+                            label="选择图片"
                             max-height="750"
                     ></v-select>
                 </v-flex>
                 <v-flex xs2 md2 class="controls">
-                    <v-switch label="????"
+                    <v-switch label="使用显卡"
                               v-model="useGPU"
                               :disabled="modelLoading || modelInitializing || modelRunning || !hasWebGL"
                               color="primary"
@@ -57,27 +57,27 @@
                                   :modelRunningProgress="modelRunningProgress"
                     ></model-status>
                 </transition>
-                <div class="subheading text-xs-left mb-2">??</div>
+                <div class="subheading text-xs-left mb-2">输出</div>
                 <image-comparison :height="outputImageShape[0]" :width="outputImageShape[1]">
                     <canvas style="background:white;" slot="after" id="output-canvas"/>
                     <canvas style="background:white;" slot="before" id="scaled-input-canvas"/>
                     <div v-if="modelRunning" slot="message" class="loading-indicator display-1 orange--text">
-                        ?????...
+                        模型运行中...
                     </div>
-                    <div v-else-if="modelRunningError" slot="message" class="error-message display-1 error--text">??????
+                    <div v-else-if="modelRunningError" slot="message" class="error-message display-1 error--text">模型运行错误
                     </div>
-                    <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="beforeLabel">??</span>
+                    <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="beforeLabel">输入</span>
                     <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0"
-                          slot="afterLabel">??</span>
+                          slot="afterLabel">输出</span>
                 </image-comparison>
             </div>
             <div class="input-image-panel text-xs-center pa-2 my-4">
-                <div class="subheading text-xs-left mb-2">??</div>
+                <div class="subheading text-xs-left mb-2">输入</div>
                 <div class="input-canvas-container">
                     <canvas id="input-canvas" class="white"/>
                     <div class="message">
-                        <div v-if="imageLoading" class="loading-indicator subheading orange--text">???...</div>
-                        <div v-else-if="imageLoadingError" class="error-message subheading error--text">??????
+                        <div v-if="imageLoading" class="loading-indicator subheading orange--text">加载中...</div>
+                        <div v-else-if="imageLoadingError" class="error-message subheading error--text">图片加载失败
                         </div>
                     </div>
                 </div>
