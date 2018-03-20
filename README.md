@@ -1,5 +1,5 @@
 
-## Manga Colorization In Browser [[Demo-Link]](http://47.98.46.70) [[Project-Page]](https://zhuanlan.zhihu.com/p/34672860)
+## Manga Colorization In Browser [[Demo-Link]](http://47.98.46.70) [[Demo-Introduction]](https://zhuanlan.zhihu.com/p/34672860)
 
 Ongoing web applications for automatic manga colorization with model totally run in browser. 
 
