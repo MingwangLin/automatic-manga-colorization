@@ -18,13 +18,13 @@
                             v-model="modelSelect"
                             :disabled="modelLoading || modelInitializing"
                             :items="modelSelectList"
-                            label="Manga-Decolorization Model"
+                            label="??????"
                             max-height="750"
                     ></v-select>
                 </v-flex>
             </v-layout>
             <v-layout row justify-center class="input-label">
-                Choose an image file or select an image from the dropdown:
+                ?????????????????????????
             </v-layout>
             <v-layout row wrap justify-center align-center>
                 <v-flex xs7 md5>
@@ -32,18 +32,18 @@
                         <input type="file" id="input-img-file" class="justify-center" @change="onFileChange">
                     </div>
                 </v-flex>
-                <v-flex xs1 class="input-label text-xs-center">or</v-flex>
+                <v-flex xs1 class="input-label text-xs-center">?</v-flex>
                 <v-flex xs5 md3>
                     <v-select
                             v-model="imageURLSelect"
                             :disabled="modelLoading || modelInitializing"
                             :items="imageURLSelectList"
-                            label="select image"
+                            label="????"
                             max-height="750"
                     ></v-select>
                 </v-flex>
                 <v-flex xs2 md2 class="controls">
-                    <v-switch label="use GPU"
+                    <v-switch label="????"
                               v-model="useGPU"
                               :disabled="modelLoading || modelInitializing || modelRunning || !hasWebGL"
                               color="primary"
@@ -62,14 +62,13 @@
                     <canvas style="background:white;" slot="after" id="output-canvas"/>
                     <canvas style="background:white;" slot="before" id="scaled-input-canvas"/>
                     <div v-if="modelRunning" slot="message" class="loading-indicator display-1 orange--text">
-                        Running...
+                        ?????...
                     </div>
-                    <div v-else-if="modelRunningError" slot="message" class="error-message display-1 error--text">Error
-                        running neural network model
+                    <div v-else-if="modelRunningError" slot="message" class="error-message display-1 error--text">??????
                     </div>
-                    <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="beforeLabel">Raw manga</span>
+                    <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="beforeLabel">??</span>
                     <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0"
-                          slot="afterLabel">Decolorized Manga</span>
+                          slot="afterLabel">??</span>
                 </image-comparison>
             </div>
             <div class="input-image-panel text-xs-center pa-2 my-4">
@@ -77,9 +76,8 @@
                 <div class="input-canvas-container">
                     <canvas id="input-canvas" class="white"/>
                     <div class="message">
-                        <div v-if="imageLoading" class="loading-indicator subheading orange--text">Loading...</div>
-                        <div v-else-if="imageLoadingError" class="error-message subheading error--text">Error loading
-                            URL
+                        <div v-if="imageLoading" class="loading-indicator subheading orange--text">???</div>
+                        <div v-else-if="imageLoadingError" class="error-message subheading error--text">??????
                         </div>
                     </div>
                 </div>

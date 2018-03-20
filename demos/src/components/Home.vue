@@ -14,19 +14,19 @@
 <script>
     const DEMO_INFO = [
         {
-            title: 'Manga Colorization (256*256 output)',
+            title: '?????? (??)',
             path: 'manga-colorization',
             imagePath: 'demos/assets/manga-colorization.png'
         },
 
         {
-            title: 'Manga Colorization (400*400 output)',
+            title: '?????? (??)',
             path: 'manga-colorization-big',
             imagePath: 'demos/assets/manga-colorization-big.png'
         },
 
         {
-            title: 'Manga Decolorization (256*256 output)',
+            title: '?????? (??)',
             path: 'manga-decolorization',
             imagePath: 'demos/assets/manga-decolorization.png'
         }
