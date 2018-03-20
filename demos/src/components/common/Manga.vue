@@ -172,12 +172,12 @@
                 this.clearAll()
                 this.model.cleanup()
                 this.model.events.removeAllListeners()
+                this.modelRunning = false
+                this.modelRunningProgress = 0
                 this.modelLoading = true
                 this.modelLoadingProgress = 0
                 this.modelInitializing = true
                 this.modelInitProgress = 0
-                this.modelRunning = false
-                this.modelRunningProgress = 0
                 this.modelLayersInfo = []
                 this.model = new KerasJS.Model({
                     filepath: `${this.modelFilePath}${newVal}.bin`,
