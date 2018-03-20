@@ -7,35 +7,30 @@
             <v-card-text>
 
                 <div class="info-panel-text" v-if="currentView === 'manga-decolorization'">
-                    <p>This demonstrates several CNN models for manga-colorzation. They are adapted from GitHub repo <a
+                    <p>???????????????????????????????????
+                    ????Demo?????????????Firefox?Chrome????????????????????????????</p>
+                    <p>???????<a
                             target="_blank" rel="noopener noreferrer"
                             href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>. See the
                         corresponding <a target="_blank" rel="noopener noreferrer"
                                          href="https://github.com/MingwangLin/cyclegan-keras/blob/master/CycleGAN-keras.ipynb">Jupyter
                             notebook</a> preparing the models for Keras.js.</p>
-                    <p>All computation performed entirely in your browser. Images are not uploaded to any servers.</p>
+                    <p>??????????????????????????????</p>
                 </div>
                 <div class="info-panel-text" v-else-if="currentView === 'manga-colorization'">
-                    <p>This demonstrates several CNN models for manga-decolorzation. They are adapted from GitHub repo
+                    <p>???????
                         <a
                                 target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>. See
-                        the
-                        corresponding <a target="_blank" rel="noopener noreferrer"
-                                         href="https://github.com/MingwangLin/cyclegan-keras/blob/master/CycleGAN-keras.ipynb">Jupyter
-                            notebook</a> preparing the models for Keras.js.</p>
-                    <p>All computation performed entirely in your browser. Images are not uploaded to any servers.</p>
+                                href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>?</p>
+                    <p>??????????????????????????????</p>
                 </div>
                 <div class="info-panel-text" v-else-if="currentView === 'manga-colorization-big'">
-                    <p>Manga Colorization with bigger image size will need more computation sources, so model running might
-                        be very slow if your PC is not powerful.</p>
-                    <p>This demonstrates several CNN models for manga-colorzation. They are adapted from GitHub repo <a
+                    <p>??????????????????????????????????????????????
+                    ????Demo?????????????Firefox?Chrome????????????????????????????</p>
+                    <p>???????<a
                             target="_blank" rel="noopener noreferrer"
-                            href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>. See the
-                        corresponding <a target="_blank" rel="noopener noreferrer"
-                                         href="https://github.com/MingwangLin/cyclegan-keras/blob/master/CycleGAN-keras.ipynb">Jupyter
-                            notebook</a> preparing the models for Keras.js.</p>
-                    <p>All computation performed entirely in your browser. Images are not uploaded to any servers.</p>
+                            href="https://github.com/MingwangLin/cyclegan-keras">MingwangLin/CycleGAN-keras</a>?</p>
+                    <p>??????????????????????????????</p>
                 </div>
             </v-card-text>
             <v-card-actions>

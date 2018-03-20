@@ -27,11 +27,11 @@
         computed: {
             message() {
                 if (this.modelLoading) {
-                    return 'Downloading weights...'
+                    return '????????...'
                 } else if (this.modelInitializing) {
-                    return 'Initializing model...'
+                    return '?????????...'
                 } else if (this.modelRunning) {
-                    return 'Running model...'
+                    return '???????...'
                 }
                 else {
                     return ''
