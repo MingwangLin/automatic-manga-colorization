@@ -29,9 +29,9 @@
                 if (this.modelLoading) {
                     return '正在下载模型参数...'
                 } else if (this.modelInitializing) {
-                    return '正在初始化上色模型...'
+                    return '正在初始化模型...'
                 } else if (this.modelRunning) {
-                    return '上色模型运行中...'
+                    return '模型运行中...'
                 }
                 else {
                     return ''
