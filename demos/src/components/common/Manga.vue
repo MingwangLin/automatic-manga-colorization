@@ -177,6 +177,7 @@
                 this.modelInitializing = true
                 this.modelInitProgress = 0
                 this.modelRunning = false
+                this.modelRunningProgress = 0
                 this.modelLayersInfo = []
                 this.model = new KerasJS.Model({
                     filepath: `${this.modelFilePath}${newVal}.bin`,
