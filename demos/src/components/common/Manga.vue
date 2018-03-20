@@ -194,6 +194,7 @@
                 this.modelRunningProgress = 0
                 this.model.events.on('predictProgress', this.handleRunningProgress)
                 this.loadImageToCanvas(newVal)
+                this.modelRunning = false
             },
 
             useGPU(newVal) {
