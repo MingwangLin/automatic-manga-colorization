@@ -1,5 +1,5 @@
 <template>
-    <div class="demo">
+    <div class="manga">
         <v-alert outline color="error" icon="priority_high" :value="!hasWebGL">
             Note: this browser does not support WebGL 2 or the features necessary to run in GPU mode.
         </v-alert>
@@ -18,7 +18,7 @@
                             v-model="modelSelect"
                             :disabled="modelLoading || modelInitializing"
                             :items="modelSelectList"
-                            label="Manga-Decolorization Model"
+                            label="Manga-Colorization Model"
                             max-height="750"
                     ></v-select>
                 </v-flex>
@@ -57,7 +57,7 @@
                                   :modelRunningProgress="modelRunningProgress"
                     ></model-status>
                 </transition>
-                <div class="subheading text-xs-left mb-2">Decolorized Manga</div>
+                <div class="subheading text-xs-left mb-2">Colorized Manga</div>
                 <image-comparison :height="outputImageShape[0]" :width="outputImageShape[1]">
                     <canvas style="background:white;" slot="after" id="output-canvas"/>
                     <canvas style="background:white;" slot="before" id="scaled-input-canvas"/>
@@ -69,7 +69,7 @@
                     </div>
                     <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0" slot="beforeLabel">Raw manga</span>
                     <span v-if="inputImageShape[0] > 0 && inputImageShape[1] > 0"
-                          slot="afterLabel">Decolorized Manga</span>
+                          slot="afterLabel">Colorized Manga</span>
                 </image-comparison>
             </div>
             <div class="input-image-panel text-xs-center pa-2 my-4">
@@ -96,35 +96,31 @@
     import loadImage from 'blueimp-load-image'
     import ndarray from 'ndarray'
     import ops from 'ndarray-ops'
-    import {IMAGE_URLS_COLOR} from '../../data/sample-image-urls'
-    import ImageComparison from '../common/ImageComparison'
-    import ModelStatus from '../common/ModelStatus'
+    import {IMAGE_URLS} from '../../data/sample-image-urls'
+    import ImageComparison from './ImageComparison'
+    import ModelStatus from './ModelStatus'
 
-
-    const MODEL_SELECT_LIST = [
-        {text: 'Cycle-GAN-Basic(7.9MB)', value: 'sr'}
-
-    ]
-
-    const DEV_FILEPATH_PREFIX = '/demos/data/manga_decolorization/'
-    const PROD_FILEPATH_PREFIX = '/demos/data/manga_decolorization/'
-
-    const DEFAULT_MODEL = MODEL_SELECT_LIST[0].value
-    const DEFAULT_FILEPATH =
-        process.env.NODE_ENV === 'production'
-            ? `${PROD_FILEPATH_PREFIX}${DEFAULT_MODEL}.bin`
-            : `${DEV_FILEPATH_PREFIX}${DEFAULT_MODEL}.bin`
 
     export default {
-        props: ['hasWebGL'],
+        props: {
+            hasWebGL: {type: Boolean, required: true},
+            modelFilePath: {type: String, required: true},
+            modelSelectList: {type: Array, required: true},
+            srcMaxWidth: {type: Number, required: true},
+            srcMaxHeight: {type: Number, required: true},
+            patchSize: {type: Number, required: true},
+            patchStride: {type: Number, required: true},
+            downsamplingRatio: {type: Number, required: true},
+        },
 
         components: {ImageComparison, ModelStatus},
 
         created() {
             // store module on component instance as non-reactive object
+            console.log('this.modelFilePath', this.modelFilePath)
             this.model = new KerasJS.Model({
-                filepath: DEFAULT_FILEPATH,
-                gpu: this.hasWebGL
+                filepath: `${this.modelFilePath}${this.modelSelectList[0].value}.bin`,
+                gpu: this.hasWebGL,
             })
 
             this.model.events.on('loadingProgress', this.handleLoadingProgress)
@@ -144,8 +140,8 @@
         data() {
             return {
                 useGPU: this.hasWebGL,
-                modelSelect: DEFAULT_MODEL,
-                modelSelectList: MODEL_SELECT_LIST,
+                modelSelect: this.modelSelectList[0].value,
+                modelSelectList: this.modelSelectList,
                 modelLoading: true,
                 modelLoadingProgress: 0,
                 modelInitializing: true,
@@ -156,17 +152,12 @@
                 modelRunningError: false,
                 imageURLInput: '',
                 imageURLSelect: null,
-                imageURLSelectList: IMAGE_URLS_COLOR,
+                imageURLSelectList: IMAGE_URLS,
                 imageLoading: false,
                 imageLoadingError: false,
-                srcMaxWidth: 256,
-                srcMaxHeight: 256,
-                patchSize: 256,
-                patchStride: 256,
-                downsamplingRatio: 0.8,
                 inputImageShape: [0, 0],
                 outputImageShape: [0, 0],
-                output: null
+                output: null,
             }
         },
 
@@ -185,12 +176,10 @@
                 this.modelLoadingProgress = 0
                 this.modelInitializing = true
                 this.modelInitProgress = 0
+                this.modelRunning = false
                 this.modelLayersInfo = []
                 this.model = new KerasJS.Model({
-                    filepath:
-                        process.env.NODE_ENV === 'production'
-                            ? `${PROD_FILEPATH_PREFIX}${newVal}.bin`
-                            : `${DEV_FILEPATH_PREFIX}${newVal}.bin`,
+                    filepath: `${this.modelFilePath}${newVal}.bin`,
                     gpu: this.hasWebGL
                 })
                 this.model.events.on('loadingProgress', this.handleLoadingProgress)
@@ -205,6 +194,7 @@
                 this.model.events.on('predictProgress', this.handleRunningProgress)
                 this.loadImageToCanvas(newVal)
             },
+
             useGPU(newVal) {
                 this.model.toggleGPU(newVal)
             }
@@ -223,6 +213,7 @@
                     this.modelInitializing = false
                 }
             },
+
             handleRunningProgress(progress) {
                 this.modelRunningProgress = Math.round(progress)
                 if (progress === 100) {
@@ -230,6 +221,7 @@
                 }
             },
             onFileChange(e) {
+                // this.imageURLSelect = null
                 let file = e.target.files[0]
                 if (file) {
                     this.modelRunning = true
@@ -239,13 +231,13 @@
                 this.loadImageToCanvas(file)
             },
 
+
             loadImageToCanvas(file) {
 
                 this.imageLoading = true
                 loadImage(
                     file,
                     img => {
-                        console.log('img', img.type)
                         if (img.type === 'error') {
                             this.imageLoadingError = true
                             this.imageLoading = false
@@ -309,6 +301,7 @@
                     for (let j0Index = 0; j0Index < j0List.length; j0Index++) {
                         const j0 = j0List[j0Index]
                         const patch = ndarray(new Float32Array(size * size * 3), [size, size, 3])
+                        // console.log('mangacolor_vue patch', patch)
                         const i1 = i0 + size > height ? height : i0 + size
                         const j1 = j0 + size > width ? width : j0 + size
                         ops.assign(patch.hi(i1 - i0, j1 - j0, 3).lo(0, 0, 0), dataArr.hi(i1, j1, 3).lo(i0, j0, 0))
@@ -355,29 +348,29 @@
             async runModel() {
                 // generate preprocessed patches
                 const inputPatches = this.generatePatches()
+                console.log('Data', inputPatches)
                 if (!inputPatches.length) {
                     this.modelRunning = false
                     return
                 }
 
                 const inputName = this.model.inputLayerNames[0]
-                console.log('inputName', inputName)
                 const outputName = this.model.outputLayerNames[0]
-                console.log('outputName', outputName)
                 const size = this.trueUpscaling ? this.patchSize * 2 : this.patchSize
                 try {
                     const outputPatches = await Promise.mapSeries(inputPatches, async patch => {
                         const inputData = {[inputName]: patch.data}
                         const outputData = await this.model.predict(inputData)
-                        // console.log('Data', inputData, outputData)
                         return ndarray(outputData[outputName], [size, size, 3])
                     })
                     // combine output patches and draw image
-                    console.log('outputPatches', outputPatches)
+                    const n = new Date().getTime()
                     this.output = this.combinePatches(outputPatches)
+                    const nn = new Date().getTime()
+                    console.log('time cost', nn - n)
                     this.drawImage()
                 } catch (err) {
-                    console.log(err)
+                    // console.log(err)
                     this.modelRunning = false
                     this.modelRunningError = true
                     return

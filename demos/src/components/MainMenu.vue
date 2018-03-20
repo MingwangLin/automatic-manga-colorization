@@ -49,7 +49,7 @@
     <p class="menu-label">Blog</p>
     <ul class="menu-list blog">
       <li>
-        <a href="https://zhuanlan.zhihu.com/p/34672860" target="_blank" rel="noopener noreferrer"><v-icon>fa-zhihu</v-icon> Project Introduction</a>
+        <a href="https://zhuanlan.zhihu.com/p/34672860" target="_blank" rel="noopener noreferrer"><v-icon>fa-link</v-icon> Project Introduction</a>
       </li>
 
     </ul>
