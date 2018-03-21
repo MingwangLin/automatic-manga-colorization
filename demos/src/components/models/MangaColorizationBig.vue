@@ -4,6 +4,8 @@
                 hasWebGL="hasWebGL"
                 :modelFilePath="modelFilePath"
                 :modelSelectList="modelSelectList"
+                :modelLabel="上色模型列表"
+                :imageURLSelectList="imageURLSelectList"
                 :srcMaxWidth="400"
                 :srcMaxHeight="400"
                 :patchSize="400"
@@ -16,6 +18,7 @@
 <script>
 
     import Manga from '../common/Manga'
+    import {IMAGE_URLS} from '../../data/sample-image-urls'
 
     export default {
         props: ['hasWebGL'],
@@ -31,6 +34,8 @@
             return {
                 modelFilePath: modelFilePath,
                 modelSelectList: modelSelectList,
+                imageURLSelectList: IMAGE_URLS,
+
             }
         },
 

@@ -18,7 +18,7 @@
                             v-model="modelSelect"
                             :disabled="modelLoading || modelInitializing"
                             :items="modelSelectList"
-                            label="上色模型列表"
+                            label="modelLabel"
                             max-height="750"
                     ></v-select>
                 </v-flex>
@@ -94,7 +94,6 @@
     import loadImage from 'blueimp-load-image'
     import ndarray from 'ndarray'
     import ops from 'ndarray-ops'
-    import {IMAGE_URLS} from '../../data/sample-image-urls'
     import ImageComparison from './ImageComparison'
     import ModelStatus from './ModelStatus'
 
@@ -104,6 +103,8 @@
             hasWebGL: {type: Boolean, required: true},
             modelFilePath: {type: String, required: true},
             modelSelectList: {type: Array, required: true},
+            modelLabel: {type: String, required: true},
+            imageURLSelectList: {type:Array, required: true},
             srcMaxWidth: {type: Number, required: true},
             srcMaxHeight: {type: Number, required: true},
             patchSize: {type: Number, required: true},
@@ -139,7 +140,6 @@
             return {
                 useGPU: this.hasWebGL,
                 modelSelect: this.modelSelectList[0].value,
-                modelSelectList: this.modelSelectList,
                 modelLoading: true,
                 modelLoadingProgress: 0,
                 modelInitializing: true,
@@ -150,7 +150,6 @@
                 modelRunningError: false,
                 imageURLInput: '',
                 imageURLSelect: null,
-                imageURLSelectList: IMAGE_URLS,
                 imageLoading: false,
                 imageLoadingError: false,
                 inputImageShape: [0, 0],
