@@ -27,7 +27,7 @@
 
 
     </ul>
-    <p class="menu-label">项目代码</p>
+    <p class="menu-label">技术源</p>
     <ul class="menu-list github">
       <li>
         <a href="https://github.com/junyanz/CycleGAN" target="_blank" rel="noopener noreferrer">
